@@ -10,22 +10,22 @@ public class Utils {
 	private static boolean isStartingOut=false;
 	private static boolean isStartingIn=false;
 	/**
-	 * Ö´ĞĞ³öÈ¥µÄ¶¯»­
+	 * æ‰§è¡Œå‡ºå»çš„åŠ¨ç”»
 	 * 
 	 * @param view
 	 */
-	public static void startOutRotateAnimation(ViewGroup view,long startOffset) {// ViewGroup·½±ã´¦Àí×ÓÔªËØ
+	public static void startOutRotateAnimation(ViewGroup view,long startOffset) {// ViewGroupæ–¹ä¾¿å¤„ç†å­å…ƒç´ 
 
 		//
 		int childCount = view.getChildCount();
 		View childView;
-		// ÉèÖÃ×Ó¿Ø¼şÎª²»¿ÉÓÃ
+		// è®¾ç½®å­æ§ä»¶ä¸ºä¸å¯ç”¨
 		for (int i = 0; i < childCount; i++) {
 			childView = view.getChildAt(i);
 			childView.setEnabled(false);
 		}
 		RotateAnimation anim = new RotateAnimation(0f, -180f,
-				Animation.RELATIVE_TO_SELF, 0.5f, // ²Î¿¼µã
+				Animation.RELATIVE_TO_SELF, 0.5f, // å‚è€ƒç‚¹
 				Animation.RELATIVE_TO_SELF, 1.0f);
 		anim.setDuration(500);
 		anim.setStartOffset(startOffset);
@@ -51,38 +51,38 @@ public class Utils {
 		view.setAnimation(anim);
 	}
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÕıÔÚÖ´ĞĞ³öÈ¥µÄ¶¯»­
+	 * åˆ¤æ–­æ˜¯å¦æ­£åœ¨æ‰§è¡Œå‡ºå»çš„åŠ¨ç”»
 	 * @return
 	 */
 	public static boolean isStartingOut(){
 		return isStartingOut;
 	}
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÕıÔÚÖ´ĞĞ½øÀ´µÄ¶¯»­
+	 * åˆ¤æ–­æ˜¯å¦æ­£åœ¨æ‰§è¡Œè¿›æ¥çš„åŠ¨ç”»
 	 * @return
 	 */
 	public static boolean isStartingin(){
 		return isStartingIn;
 	}
 	/**
-	 * Ö´ĞĞ³öÈ¥µÄ¶¯»­
+	 * æ‰§è¡Œå‡ºå»çš„åŠ¨ç”»
 	 * 
 	 * @param view
 	 * @param startOffset 
 	 */
-	public static void startInRotateAnimation(ViewGroup view,long startOffset) {// ViewGroup·½±ã´¦Àí×ÓÔªËØ
+	public static void startInRotateAnimation(ViewGroup view,long startOffset) {// ViewGroupæ–¹ä¾¿å¤„ç†å­å…ƒç´ 
 
 		//
 		int childCount = view.getChildCount();
 		View childView;
-		// ÉèÖÃ×Ó¿Ø¼şÎª²»¿ÉÓÃ
+		// è®¾ç½®å­æ§ä»¶ä¸ºä¸å¯ç”¨
 		for (int i = 0; i < childCount; i++) {
 			childView = view.getChildAt(i);
 			childView.setEnabled(true);
 		}
 		RotateAnimation anim = new RotateAnimation(
 				-180f, 0f,
-				Animation.RELATIVE_TO_SELF, 0.5f, // ²Î¿¼µã
+				Animation.RELATIVE_TO_SELF, 0.5f, // å‚è€ƒç‚¹
 				Animation.RELATIVE_TO_SELF, 1.0f);
 		anim.setDuration(500);
 		anim.setStartOffset(startOffset);

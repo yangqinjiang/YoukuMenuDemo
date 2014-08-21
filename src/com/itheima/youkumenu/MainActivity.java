@@ -24,9 +24,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	private boolean isDispalyLevel2=true;
 
 	private void initView() {
-		// 二级菜单
+		// 浜岀骇鑿滃崟
 		rl_level2 = (ViewGroup) findViewById(R.id.rl_level2);
-		// 三级菜单
+		// 涓夌骇鑿滃崟
 		rl_level3 = (ViewGroup) findViewById(R.id.rl_level3);
 
 		findViewById(R.id.ib_home).setOnClickListener(this);
@@ -35,7 +35,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		if(Utils.isStartingOut() || Utils.isStartingin())return;//如果正在执行动画
+		if(Utils.isStartingOut() || Utils.isStartingin())return;//濡傛灉姝ｅ湪鎵ц鍔ㄧ敾
 		switch (v.getId()) {
 		case R.id.ib_home:
 			Toast.makeText(getApplicationContext(), "ib_home", 0).show();
@@ -56,10 +56,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.ib_menu:
 			Toast.makeText(getApplicationContext(), "ib_menu", 0).show();
 			if(isDispalyLevel3){
-				//隐藏
+				//闅愯棌
 				Utils.startOutRotateAnimation(rl_level3,0);
 			}else{
-				//显示
+				//鏄剧ず
 				Utils.startInRotateAnimation(rl_level3,0);
 			}
 			isDispalyLevel3 =!isDispalyLevel3;
